@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_display_height"
+            android:orientation="horizontal" >
+
+            <com.fusionleap.android.calculator.view.CalculatorDisplay
+                android:id="@+id/display"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                maxDigits="@integer/max_digits" >
+
+                <com.fusionleap.android.calculator.view.ScrollableDisplay style="@style/display_style" />
+
+                <com.fusionleap.android.calculator.view.ScrollableDisplay style="@style/display_style" />
+            </com.fusionleap.android.calculator.view.CalculatorDisplay>
+
+            <ImageButton
+                android:id="@+id/overflow_menu"
+                android:layout_width="48dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dip"
+                android:background="@drawable/menu_bg"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_menu_overflow"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <!-- marginRight has to be 0 to catch border-touch -->
+
+                <com.fusionleap.android.calculator.view.ColorButton
+                    android:id="@+id/clear"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:text="@string/clear"
+                    android:textSize="15sp" />
+                <!-- marginRight has to be 0 to catch border-touch -->
+
+                <com.fusionleap.android.calculator.view.ColorButton
+                    android:id="@+id/del"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/del"
+                    android:textSize="15sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.xlythe.slider.Slider
+                android:id="@+id/pulldown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:scrollbarThumbHorizontal="@drawable/btn_function" >
+
+                <include layout="@layout/history_panel" />
+            </com.xlythe.slider.Slider>
+
+            <com.fusionleap.android.calculator.view.CalculatorViewPager
+                android:id="@+id/panelswitch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/history_bar_height" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/simple_cling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/simple_cling"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/matrix_cling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/matrix_cling"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/hex_cling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/hex_cling"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/graph_cling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/graph_cling"
+        android:visibility="gone" />
+
+</RelativeLayout>

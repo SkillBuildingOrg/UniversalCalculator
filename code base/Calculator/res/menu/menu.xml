@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/show_history"
+        android:icon="@drawable/clear_history"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/showHistory"/>
+    <item
+        android:id="@+id/hide_history"
+        android:icon="@drawable/clear_history"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/hideHistory"/>
+    <item
+        android:id="@+id/clear_history"
+        android:icon="@drawable/clear_history"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/clear_history"/>
+    <item
+        android:id="@+id/matrix"
+        android:icon="@drawable/matrix"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/matrix"/>
+    <item
+        android:id="@+id/advanced"
+        android:icon="@drawable/advanced"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/advanced"/>
+    <item
+        android:id="@+id/basic"
+        android:icon="@drawable/simple"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/basic"/>
+    <item
+        android:id="@+id/hex"
+        android:icon="@drawable/hex"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/hexPanel"/>
+    <item
+        android:id="@+id/function"
+        android:icon="@drawable/function"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/function"/>
+    <item
+        android:id="@+id/graph"
+        android:icon="@drawable/graph"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/graph"/>
+    <item
+        android:id="@+id/lock"
+        android:icon="@drawable/lock"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/lock"/>
+    <item
+        android:id="@+id/unlock"
+        android:icon="@drawable/unlock"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/unlock"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/settings"/>
+
+    <!-- <item android:id="@+id/exit" -->
+    <!-- android:showAsAction="ifRoom|withText" -->
+    <!-- android:icon="@drawable/settings" -->
+    <!-- android:title="Close Application"/> -->
+
+</menu>
